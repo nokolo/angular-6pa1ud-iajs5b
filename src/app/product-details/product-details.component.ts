@@ -12,6 +12,7 @@ import { CartService } from '../cart.service';
 export class ProductDetailsComponent implements OnInit {
   product;
   
+  
   constructor(
     private route: ActivatedRoute,
     private cartService: CartService
@@ -24,6 +25,8 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addToCart(product){
+    //var myProd;
+    //myProd = JSON.stringify(product);
     window.alert('Your product' + this.product + 'has been added to the cart!');
     this.cartService.addToCart(product);
   }
